@@ -1,6 +1,7 @@
-// Add function to fill in other player's choices so we don't pick them 
-// Fill out player names - select Ghille if playerName = Geoff
-// Choose how many players we are randomly selecting for
+// If you click the 1/2/3/4 gearloc buttons too many times you exhaust the array. 
+// Generating gearlocs should clear your exceptions and rebuild the array
+// or we handle exslusions with global variables instead of modifying the array directly
+// function to toggle exceptions on and off would make resetting easier
 
 window.onload = function () {
 var gearlocList = ["Picket","Patches","Tantrum","Boomer","Tink","Ghille","Nugget","Stanza","Duster","Gasket","Lab Rats","Dart"];
@@ -24,7 +25,6 @@ function getGearlocs(playerCount){
 }
 const randomGearloc1 = document.querySelector('#randomGearloc1')
 randomGearloc1.addEventListener('click', (e) => {   
-    this.console.log("button");
     getGearlocs(1); 
 })
 const randomGearloc2 = document.querySelector('#randomGearloc2')
