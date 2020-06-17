@@ -1,4 +1,4 @@
-.main button{
+button{
     background-color: #e0ac2f;
     border: none;
     color: white;
@@ -6,8 +6,11 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 30px;
+    font-size: 16px;
   }
+div{
+    padding: 15px 32px;
+}
 body{
     background-color: black;
     text-align:center;
@@ -15,5 +18,5 @@ body{
 p{
     color: white;
     text-align:center;
-    font-size: 45px;
+    font-size: 30px;
 }
