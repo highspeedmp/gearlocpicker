@@ -21,12 +21,13 @@ window.onload = function() {
   }
   function getGearlocs(playerCount) {
     clearList();
+    const gearlocListCopy = [...gearlocList];
     let i = 1;
     while (i <= playerCount) {
       const loc = document.getElementById(`Gearloc${i}`);
-      const randNum = Math.floor(Math.random() * (gearlocList.length - 1));
-      loc.innerHTML = gearlocList[randNum];
-      gearlocList.splice(randNum, 1);
+      const randNum = Math.floor(Math.random() * (gearlocListCopy.length - 1));
+      loc.innerHTML = gearlocListCopy[randNum];
+      gearlocListCopy.splice(randNum, 1);
       i++;
     }
   }
