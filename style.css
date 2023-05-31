@@ -1,5 +1,6 @@
 button{
-    background-color: #e0ac2f;
+    /* #background-color: #e0ac2f; */
+    background-color: #ff6b00;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -13,7 +14,8 @@ div{
 }
 body{
     text-align:center;
-    background-color: black;}
+    /*background-color: black;} */
+    background-color: #0f1117;}
 p{
     color: white;
     text-align:center;

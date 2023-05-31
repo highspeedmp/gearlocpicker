@@ -12,6 +12,22 @@ window.onload = function() {
     'Gasket',
     'Lab Rats',
     'Dart',
+    'Riffle',
+    'Figment',
+    'Gale',
+    'Polaris',
+    'Static',
+    'Carcass',
+  ];
+  const tyrantList = [
+    'Nom',
+    'Mulmesh',
+    'Duster',
+    'Goblin King',
+    'Drellen',
+    'VolKesh',
+    'Barnacle',
+    'Build a Tyrant',
   ];
   function clearList() {
     document.getElementById('Gearloc1').innerHTML = '';
@@ -48,171 +64,39 @@ window.onload = function() {
     getGearlocs(4);
   });
 
-  const btnPicket = document.querySelector('#Picket');
-  btnPicket.addEventListener('click', e => {
-    const check = gearlocList.indexOf('Picket');
-    if (check != -1) {
-      gearlocList.splice(check, 1);
-      btnPicket.style.background = '#800000';
-      btnPicket.style.color = '#808080';
+// Create a container for the buttons
+const buttonContainer = document.getElementById('preselected_container');
+
+// Loop through the array of Gearlocs
+gearlocList.forEach((gearloc) => {
+  // Create a new button
+  const button = document.createElement('button');
+  // Set the button's text to the Gearloc
+  button.textContent = gearloc;
+  // Add the button to the button container
+  buttonContainer.appendChild(button);
+  // Add an event listener to the button
+  button.addEventListener('click', e => {
+    // Get the index of the gear location in the array
+    const index = gearlocList.indexOf(gearloc);
+    // If the gear location is in the array
+    if (index != -1) {
+      // Remove the gear location from the array
+      gearlocList.splice(index, 1);
+      // Change the button's background color to black
+      button.style.backgroundColor = '#0f1117';
+      // Change the button's text color to gray
+      button.style.color = '#808080';
     } else {
-      gearlocList.push('Picket');
-      btnPicket.style.background = '#e0ac2f';
-      btnPicket.style.color = 'white';
+      // Add the gear location to the array
+      gearlocList.push(gearloc);
+      // Change the button's background color to orange
+      button.style.backgroundColor = '#ff6b00';
+      // Change the button's text color to white
+      button.style.color = 'white';
     }
+
   });
 
-  const btnPatches = document.querySelector('#Patches');
-  btnPatches.addEventListener('click', e => {
-    const check = gearlocList.indexOf('Patches');
-    if (check != -1) {
-      gearlocList.splice(check, 1);
-      btnPatches.style.background = '#800000';
-      btnPatches.style.color = '#808080';
-    } else {
-      gearlocList.push('Patches');
-      btnPatches.style.background = '#e0ac2f';
-      btnPatches.style.color = 'white';
-    }
-  });
-
-  const btnTantrum = document.querySelector('#Tantrum');
-  btnTantrum.addEventListener('click', e => {
-    const check = gearlocList.indexOf('Tantrum');
-    if (check != -1) {
-      gearlocList.splice(check, 1);
-      btnTantrum.style.background = '#800000';
-      btnTantrum.style.color = '#808080';
-    } else {
-      gearlocList.push('Tantrum');
-      btnTantrum.style.background = '#e0ac2f';
-      btnTantrum.style.color = 'white';
-    }
-  });
-
-  const btnBoomer = document.querySelector('#Boomer');
-  btnBoomer.addEventListener('click', e => {
-    const check = gearlocList.indexOf('Boomer');
-    if (check != -1) {
-      gearlocList.splice(check, 1);
-      btnBoomer.style.background = '#800000';
-      btnBoomer.style.color = '#808080';
-    } else {
-      gearlocList.push('Boomer');
-      btnBoomer.style.background = '#e0ac2f';
-      btnBoomer.style.color = 'white';
-    }
-  });
-
-  const btnTink = document.querySelector('#Tink');
-  btnTink.addEventListener('click', e => {
-    const check = gearlocList.indexOf('Tink');
-    if (check != -1) {
-      gearlocList.splice(check, 1);
-      btnTink.style.background = '#800000';
-      btnTink.style.color = '#808080';
-    } else {
-      gearlocList.push('Tink');
-      btnTink.style.background = '#e0ac2f';
-      btnTink.style.color = 'white';
-    }
-  });
-
-  const btnGhille = document.querySelector('#Ghille');
-  btnGhille.addEventListener('click', e => {
-    const check = gearlocList.indexOf('Ghille');
-    if (check != -1) {
-      gearlocList.splice(check, 1);
-      btnGhille.style.background = '#800000';
-      btnGhille.style.color = '#808080';
-    } else {
-      gearlocList.push('Ghille');
-      btnGhille.style.background = '#e0ac2f';
-      btnGhille.style.color = 'white';
-    }
-  });
-
-  const btnNugget = document.querySelector('#Nugget');
-  btnNugget.addEventListener('click', e => {
-    const check = gearlocList.indexOf('Nugget');
-    if (check != -1) {
-      gearlocList.splice(check, 1);
-      btnNugget.style.background = '#800000';
-      btnNugget.style.color = '#808080';
-    } else {
-      gearlocList.push('Nugget');
-      btnNugget.style.background = '#e0ac2f';
-      btnNugget.style.color = 'white';
-    }
-  });
-
-  const btnStanza = document.querySelector('#Stanza');
-  btnStanza.addEventListener('click', e => {
-    const check = gearlocList.indexOf('Stanza');
-    if (check != -1) {
-      gearlocList.splice(check, 1);
-      btnStanza.style.background = '#800000';
-      btnStanza.style.color = '#808080';
-    } else {
-      gearlocList.push('Stanza');
-      btnStanza.style.background = '#e0ac2f';
-      btnStanza.style.color = 'white';
-    }
-  });
-
-  const btnDuster = document.querySelector('#Duster');
-  btnDuster.addEventListener('click', e => {
-    const check = gearlocList.indexOf('Duster');
-    if (check != -1) {
-      gearlocList.splice(check, 1);
-      btnDuster.style.background = '#800000';
-      btnDuster.style.color = '#808080';
-    } else {
-      gearlocList.push('Duster');
-      btnDuster.style.background = '#e0ac2f';
-      btnDuster.style.color = 'white';
-    }
-  });
-
-  const btnGasket = document.querySelector('#Gasket');
-  btnGasket.addEventListener('click', e => {
-    const check = gearlocList.indexOf('Gasket');
-    if (check != -1) {
-      gearlocList.splice(check, 1);
-      btnGasket.style.background = '#800000';
-      btnGasket.style.color = '#808080';
-    } else {
-      gearlocList.push('Gasket');
-      btnGasket.style.background = '#e0ac2f';
-      btnGasket.style.color = 'white';
-    }
-  });
-
-  const btnLabRats = document.querySelector('#LabRats');
-  btnLabRats.addEventListener('click', e => {
-    const check = gearlocList.indexOf('Lab Rats');
-    if (check != -1) {
-      gearlocList.splice(check, 1);
-      btnLabRats.style.background = '#800000';
-      btnLabRats.style.color = '#808080';
-    } else {
-      gearlocList.push('Lab Rats');
-      btnLabRats.style.background = '#e0ac2f';
-      btnLabRats.style.color = 'white';
-    }
-  });
-
-  const btnDart = document.querySelector('#Dart');
-  btnDart.addEventListener('click', e => {
-    const check = gearlocList.indexOf('Dart');
-    if (check != -1) {
-      gearlocList.splice(check, 1);
-      btnDart.style.background = '#800000';
-      btnDart.style.color = '#808080';
-    } else {
-      gearlocList.push('Dart');
-      btnDart.style.background = '#e0ac2f';
-      btnDart.style.color = 'white';
-    }
-  });
+});
 };
