@@ -47,22 +47,17 @@ window.onload = function() {
       i++;
     }
   }
-  const randomGearloc1 = document.querySelector('#randomGearloc1');
-  randomGearloc1.addEventListener('click', e => {
-    getGearlocs(1);
+  const buttonContainerNum = document.getElementById('main_container');
+
+for (let i = 0; i < 4; i++) {
+  const button = document.createElement('button');
+  // Set the button's text to the number
+    buttonContainerNum.appendChild(button);
+  button.textContent = (i + 1);
+  button.addEventListener('click', e => {
+    getGearlocs(i + 1);
   });
-  const randomGearloc2 = document.querySelector('#randomGearloc2');
-  randomGearloc2.addEventListener('click', e => {
-    getGearlocs(2);
-  });
-  const randomGearloc3 = document.querySelector('#randomGearloc3');
-  randomGearloc3.addEventListener('click', e => {
-    getGearlocs(3);
-  });
-  const randomGearloc4 = document.querySelector('#randomGearloc4');
-  randomGearloc4.addEventListener('click', e => {
-    getGearlocs(4);
-  });
+}
 
 // Create a container for the buttons
 const buttonContainer = document.getElementById('preselected_container');
