@@ -1,6 +1,5 @@
 button{
-    /* #background-color: #e0ac2f; */
-    background-color: #ff6b00;
+     background-color: #ff6b00;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -8,16 +7,18 @@ button{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    font-family: "Inter",Arial,Helvetica,"Helvetica Neue",sans-serif;
+    font-size: 15px;
   }
 div{
     padding: 15px 32px;
 }
 body{
     text-align:center;
-    /*background-color: black;} */
     background-color: #0f1117;}
 p{
     color: white;
     text-align:center;
-    font-size: 30px;
+    font-family: "Inter",Arial,Helvetica,"Helvetica Neue",sans-serif;
+    font-size: 15px;
 }
