@@ -1,4 +1,5 @@
 button {
+   /* #background-color: #e0ac2f; */
    background-color: #ff6b00;
    border: none;
    color: white;
@@ -14,6 +15,7 @@ div {
 }
 body {
    text-align: center;
+   /*background-color: black;} */
    background-color: #0f1117;
 }
 p {
@@ -21,4 +23,7 @@ p {
    text-align: center;
    font-family: "Inter", Arial, Helvetica, "Helvetica Neue", sans-serif;
    font-size: 15px;
+}
+#results {
+   height: 50px;
 }
